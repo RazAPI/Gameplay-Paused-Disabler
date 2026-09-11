@@ -1,3 +1,6 @@
+--// Requirements: setscriptable & a medium-level executor.
+
+local Workspace = game:GetService("Workspace")
 local CoreGui = game:GetService("CoreGui")
 local RobloxGui = CoreGui.RobloxGui
 local Modules = RobloxGui.Modules
@@ -14,4 +17,8 @@ if CoreGui:FindFirstChild("RobloxNetworkPauseNotification") then
     NetworkPauseModuleScript:Destroy()
     NetworkPauseCoreScript:Destroy()
     NetworkPauseScreen:Destroy()
+
+    pcall(function()
+        setscriptable(Workspace, "StreamingIntegrityMode", Enum.StreamingIntegrityMode.Disabled)
+    end)
 end
