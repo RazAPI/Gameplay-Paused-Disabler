@@ -1,2 +1,2 @@
 # Roblox-Network-Paused-Disabler
-Disables the Network Paused Roblox notification (Unfinished)
+Disables the Network Paused Roblox notification
